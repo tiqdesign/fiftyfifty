@@ -46,12 +46,7 @@ namespace FiftyFifty
 
         private async void BtnAdd_OnClicked(object sender, EventArgs e)
         {
-            await firebaseHelper.AddUser(tb_Mail.Text,tb_Password.Text);
-            tb_Mail.Text = string.Empty;
-            tb_Password.Text = string.Empty;
-            await DisplayAlert("Success", "Person Added Successfully", "OK");
-            var allPersons = await firebaseHelper.GetAllUsers();
-            lstPersons.ItemsSource = allPersons;
+            
         }
     }
 }
